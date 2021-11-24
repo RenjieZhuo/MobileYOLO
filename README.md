@@ -11,5 +11,5 @@ submitted to VPR
 E-Mail: zhuorenjie@foxmail.com
 
 ### Reference
-https://github.com/bubbliiiing/yolov4-pytorch
+https://github.com/bubbliiiing/yolov4-pytorch \
 https://github.com/tanluren/yolov3-channel-and-layer-pruning
