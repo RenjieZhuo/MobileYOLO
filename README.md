@@ -1,6 +1,6 @@
 # MobileYOLO
 ## BrokenGlass: A Benchmark Dataset for Glass Curtain Wall Automatic Inspection by UAVs
-submitted to VPR
+submitted to CVPR2022
 
 ### Requirements
 * PyTorch == 1.9.0
