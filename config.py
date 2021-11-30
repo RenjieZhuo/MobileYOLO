@@ -1,4 +1,4 @@
-from nets.CreateYOLO import CreateNetwork
+from Networks.CreateYOLO import CreateNetwork
 from easydict import EasyDict
 import torch
 import numpy as np
@@ -39,8 +39,8 @@ Cfg.w = Cfg.input_shape[1]
 Cfg.h = Cfg.input_shape[0]
 Cfg.Cuda = True if torch.cuda.is_available() else False
 Cfg.device = 'cuda' if torch.cuda.is_available() else 'cpu'
-Cfg.anchors_path = 'model_data/glass_anchors.txt'
-Cfg.classes_path = 'model_data/glass_classes.txt'
+Cfg.anchors_path = 'utils/glass_anchors.txt'
+Cfg.classes_path = 'utils/glass_classes.txt'
 Cfg.classes = get_classes(Cfg.classes_path)
 Cfg.anchors = get_anchors(Cfg.anchors_path)
 Cfg.num_classes = len(Cfg.classes)

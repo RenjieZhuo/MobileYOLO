@@ -4,8 +4,8 @@ from utils.YOLO_Predict import YOLO
 
 while True:
     imgNum = input('Please input image number:')
-    model_path = 'Logs/Model/cv0.pth'
-    cfg_path = 'Logs/Config/cv0.cfg'
+    model_path = 'WeightsFile/Model/cv0.pth'
+    cfg_path = 'WeightsFile/Config/cv0.cfg'
     img_path = 'VOCdevkit/VOC2007/JPEGImages/{}.jpg'.format(imgNum)
     yolo = YOLO(Cfg, model_path, cfg_path)
     image = Image.open(img_path)

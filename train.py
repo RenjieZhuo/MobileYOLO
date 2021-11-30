@@ -8,7 +8,7 @@ from torch.autograd import Variable
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from config import Cfg, CreateNet
-from metrices import get_AP
+from metrics import get_AP
 from utils.dataloader import YoloDataset, yolo_dataset_collate
 from utils.utils import gather_bn_weights, Generate_Train
 from utils.yolo_loss import YOLOLoss
@@ -96,11 +96,11 @@ if __name__ == "__main__":
         Generate_Train(Cfg.train_path, Cfg.val_path, cv, Cfg.classes)
 
         netflag = 'MobileYOLO_cv{}'.format(cv)
-        model_path_train = 'Logs/Model/cv{}.pth'.format(cv)
-        cfgfile = 'Logs/Config/cv{}.cfg'.format(cv)
+        model_path_train = 'WeightsFile/Model/cv{}.pth'.format(cv)
+        cfgfile = 'WeightsFile/Config/cv{}.cfg'.format(cv)
 
         t = time.time()
-        Cfg.WriterDir = 'Logs/{}_{}'.format(netflag, int(t))
+        Cfg.WriterDir = 'WeightsFile/{}_{}'.format(netflag, int(t))
         writer = SummaryWriter(log_dir=Cfg.WriterDir)
 
         model = CreateNet(cfgfile=cfgfile)

@@ -35,8 +35,8 @@ def obtain_filters_mask(model, thresh, CBL_idx, prune_idx):
 
 
 if __name__ == '__main__':
-    cfgfile = 'model_data/IRB_yolov4.cfg'
-    modelfile = 'Logs/IRBYOLO_SparseTraining/cv4/IRBYOLO_ST_cv4.pth'
+    cfgfile = 'Networks/IRB_yolov4.cfg'
+    modelfile = 'WeightsFile/IRBYOLO_SparseTraining/cv0/IRBYOLO_ST_cv0.pth'
     prune_percent = 0.8
 
     model = CreateNet(cfgfile)
