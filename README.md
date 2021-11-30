@@ -51,7 +51,7 @@ submitted to CVPR2022
 1. set cfgfile, modelfile,prune_percent in PruneModel.py
 2. run PruneModel.py
 
-#### predict
+#### Predict
 1. set cfg_path, model_path in predict.py
 2. run predict.py
 3. input image number
