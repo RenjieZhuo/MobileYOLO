@@ -2,6 +2,9 @@
 ## BrokenGlass: A Benchmark Dataset for Glass Curtain Wall Automatic Inspection by UAVs
 submitted to CVPR2022
 
+### Dataset
+Dataset can be obtained via e-mail request!
+
 ### Requirements
 * PyTorch == 1.9.0
 * TorchVision == 0.10.0
