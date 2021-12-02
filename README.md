@@ -5,56 +5,56 @@ submitted to CVPR2022
 ### Directory structure
 ```
 ├── Networks                              
-│   ├── CreateYOLO.py         
-│   ├── IRB_yolov4.cfg    
-│   └── yolov4.cfg
+│   ├── CreateYOLO.py                      Build the network
+│   ├── IRB_yolov4.cfg                     Network profile(IRB-YOLO)
+│   └── yolov4.cfg                         Network profile(YOLOv4)
 ├── utils
-│   ├── dataloader.py       
+│   ├── dataloader.py                      Dataloader
 │   ├── utils.py 
-│   ├── yolo_loss.py
+│   ├── yolo_loss.py                       YOLO Loss
 │   ├── YOLO_Predict.py
 │   ├── glass_anchors.txt
-│   ├── glass_classes.txt
-│   └── simhei.ttf
-├── WeightsFile
-│   ├── IRBYOLO_SparseTraining     
-│   └── MobileYOLO
+│   ├── glass_classes.txt                  
+│   └── simhei.ttf                         Font profile
+├── WeightsFile                            Pre-trained models
+│   ├── IRBYOLO_SparseTraining             Sparse Training models(IRB-YOLO)
+│   └── MobileYOLO                         MobileYOLO
 │       ├── Config
 │       └── Model
-├── VOCdevkit                  
-│   └── VOC2007
-│       ├── Annotations                
-│       ├── JPEGImages
-│       └── ImageSets
+├── VOCdevkit                             
+│   └── VOC2007 
+│       ├── Annotations                    Label(.xml)
+│       ├── JPEGImages                     Images
+│       └── ImageSets                      Data set division
 │           └── Main
-├── config.py
-├── metrics.py         
-├── predict.py             
-├── PruneModel.py
+├── config.py                              Configuration file
+├── metrics.py                             Compute mAP
+├── predict.py                             Predictive images
+├── PruneModel.py                          Pruning the model
 ├── README.md
-└── train.py                      
+└── train.py                               Training the model
 ```
 
 ### Usage
 #### Normal training
-1. set Cfg.isPruneTrain = 0 in config.py
-2. set cfgfile, model_path_train in train.py
-3. run train.py
+1. Set Cfg.isPruneTrain = 0 in config.py
+2. Update cfgfile, model_path_train in train.py
+3. Run train.py
 
 #### Sparsity training
-1. set Cfg.isPruneTrain = 1 in config.py
-2. set Cfg.pruneLambda in config.py
-3. set cfgfile, model_path_train in train.py
-4. run train.py
+1. Set Cfg.isPruneTrain = 1 in config.py
+2. Modify Cfg.pruneLambda in config.py
+3. Update cfgfile, model_path_train in train.py
+4. Run train.py
 
 #### Channel pruning
-1. set cfgfile, modelfile,prune_percent in PruneModel.py
-2. run PruneModel.py
+1. Set cfgfile, modelfile,prune_percent in PruneModel.py
+2. Run PruneModel.py
 
 #### Predict
-1. set cfg_path, model_path in predict.py
-2. run predict.py
-3. input image number
+1. Set cfg_path, model_path in predict.py
+2. Run predict.py
+3. Input image number
 
 ### Dataset
 Dataset can be obtained via e-mail request!
